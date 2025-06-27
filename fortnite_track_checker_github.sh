@@ -124,9 +124,9 @@ for i, entry in enumerate(entries):
     if [[ ${#found_tracks[@]} -gt 0 ]]; then
         # Criar mensagem com as músicas encontradas
         if [[ ${#found_tracks[@]} -eq 1 ]]; then
-            notification_title="🎵 Música Encontrada no Fortnite!"
+            notification_title="Música Encontrada no Fortnite!"
         else
-            notification_title="🎵 ${#found_tracks[@]} Músicas Encontradas no Fortnite!"
+            notification_title="${#found_tracks[@]} Músicas Encontradas no Fortnite!"
         fi
         
         # Juntar as músicas encontradas em uma mensagem
