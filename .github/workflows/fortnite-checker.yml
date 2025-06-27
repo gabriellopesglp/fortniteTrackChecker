@@ -2,27 +2,27 @@ name: Fortnite Music Checker
 
 on:
   schedule:
-    - cron: '2 21 * * *'  # 21:02 UTC diariamente
-  workflow_dispatch:  # Permite execução manual
+    - cron: "52 17 * * *" # 21:02 UTC diariamente
+  workflow_dispatch: # Permite execução manual
 
 jobs:
   check-music:
     runs-on: ubuntu-latest
-    
+
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-      
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.x'
-        
-    - name: Make script executable
-      run: chmod +x fortnite_track_checker_github.sh
-      
-    - name: Run Fortnite checker
-      env:
-        USER_TOKEN: ${{ secrets.USER_TOKEN }}
-        API_TOKEN: ${{ secrets.API_TOKEN }}
-      run: ./fortnite_track_checker_github.sh
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      - name: Make script executable
+        run: chmod +x fortnite_track_checker_github.sh
+
+      - name: Run Fortnite checker
+        env:
+          USER_TOKEN: ${{ secrets.USER_TOKEN }}
+          API_TOKEN: ${{ secrets.API_TOKEN }}
+        run: ./fortnite_track_checker_github.sh
