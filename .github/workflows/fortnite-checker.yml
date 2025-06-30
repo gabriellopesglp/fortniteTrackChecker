@@ -2,7 +2,7 @@ name: Fortnite Music Checker
 
 on:
   schedule:
-    - cron: "2 23 * * *" # 20:02 UTC diariamente e tem 1h de atraso no git actions
+    - cron: "45 23 * * *" # 20:45 UTC diariamente
   workflow_dispatch: # Permite execução manual
 
 jobs:
